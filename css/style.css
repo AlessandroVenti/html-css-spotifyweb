@@ -123,6 +123,7 @@ main {
   padding-right: 40px;
   height: calc(100vh - 100px);
   background-color: #231a24;
+  overflow: auto;
 }
 main ul {
   display: flex;
@@ -148,7 +149,9 @@ section h2{
   font-size: 40px;
 }
 
-section ul.mylist1 li img {
+section ul.mylist1 li img,
+section ul.mylist2 li img,
+section ul.mylist3 li img {
   margin-top: 40px;
   margin-bottom: 20px;
   display: block;
@@ -156,17 +159,21 @@ section ul.mylist1 li img {
   height: auto;
 }
 
-section ul.mylist1 li a{
+section ul.mylist1 li a,
+section ul.mylist2 li a,
+section ul.mylist3 li a{
   display: block;
   color: white;
   text-align: center;
   font-size: 20px;
 }
 
-section ul.mylist1 li a:last-child{
+section ul.mylist1 li a:last-child,
+section ul.mylist2 li a:last-child {
   color:  #9c9c9c;
   text-align: center;
   font-size: 20px;
+  margin-bottom: 50px;
 }
 
 footer {
@@ -174,3 +181,33 @@ footer {
   height: 100px;
   width: 100%;
 }
+
+section ul.mylist2{
+  display: flex;
+  justify-content: flex-start;
+}
+
+section ul.mylist2 li img,
+section ul.mylist3 li img  {
+  margin-right: 50px;
+}
+
+section p{
+  color:  #9c9c9c;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+section ul.mylist2{
+  display: flex;
+  justify-content: flex-start;
+}
+
+section ul.mylist3{
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+section ul.mylist3 li img {
+  border-radius: 50%;
