@@ -45,12 +45,33 @@ nav ul li {
   margin: 20px 20px;
 }
 nav ul li a {
-  color: white;
+  color: #9c9c9c;
   font-size: 25px;
 }
 
 nav ul li a img {
   vertical-align: bottom;
+}
+
+ul li h3{
+  color: white;
+  font-size: 25px;
+}
+
+li div {
+  padding: 10px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 10px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+li span {
+  color: #9c9c9c;
+  margin-left: 25px;
+  font-size: 20px;
 }
 
 header {
