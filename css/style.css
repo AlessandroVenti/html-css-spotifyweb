@@ -22,6 +22,8 @@ a {
   justify-content: flex-start;
 }
 
+           /*Navbar CSS*/
+
 nav {
   display: flex;
   flex-direction: column;
@@ -51,6 +53,13 @@ nav ul li a {
   font-size: 25px;
 }
 
+nav ul li a:hover,
+ul.scroll li span:hover,
+main ul.setting li a:hover,
+nav div a:hover  {
+  color: white;
+}
+
 nav ul li a img {
   vertical-align: bottom;
 }
@@ -58,9 +67,6 @@ nav ul li a img {
 ul li h3{
   color: white;
   font-size: 25px;
-}
-
-.scroll {
 }
 
 ul.scroll li div {
@@ -94,6 +100,8 @@ hr {
   margin-left: 30px;
 }
 
+           /*Header CSS*/
+
 header {
   display: flex;
   justify-content: flex-end;
@@ -109,6 +117,7 @@ header button {
   width: 200px;
   height: 50px;
   margin-top: 25px;
+  margin-right: 20px;
   border-radius: 25px;
   font-size: 15px;
   background-color: #293133;
@@ -116,6 +125,11 @@ header button {
   color: white;
 }
 
+header button:hover {
+  transform: scale(1.2);
+}
+
+           /*Main CSS*/
 main {
   padding-top: 100px;
   width: 100%;
@@ -125,6 +139,7 @@ main {
   background-color: #231a24;
   overflow: auto;
 }
+
 main ul {
   display: flex;
   justify-content: center;
@@ -138,15 +153,55 @@ main ul.setting li a {
   color: #9c9c9c;
   font-size: 20px;
 }
+           /*Section1 CSS*/
 
 section ul.mylist1{
   display: flex;
   justify-content: space-between;
 }
 
+section ul.mylist1 li,
+section ul.mylist2 li,
+section ul.mylist3 li {
+  flex-basis: calc(100% / 6 - 25px);
+}
+
 section h2{
   color: white;
   font-size: 40px;
+}
+
+.box {
+  position: relative;
+}
+
+.layover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+li div.box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  color: yellow;
+  font-size: 60px;
+  display: none;
+}
+
+.box:hover div.layover,
+.box:hover i {
+  display:block;
+}
+
+ul.mylist3 .box:hover div.layover{
+  border-radius: 50%;
 }
 
 section ul.mylist1 li img,
@@ -155,7 +210,7 @@ section ul.mylist3 li img {
   margin-top: 40px;
   margin-bottom: 20px;
   display: block;
-  width: 220px;
+  width: 100%;
   height: auto;
 }
 
@@ -176,11 +231,7 @@ section ul.mylist2 li a:last-child {
   margin-bottom: 50px;
 }
 
-footer {
-  background-color: #293133;
-  height: 100px;
-  width: 100%;
-}
+           /*Section2 CSS*/
 
 section ul.mylist2{
   display: flex;
@@ -202,6 +253,7 @@ section ul.mylist2{
   justify-content: flex-start;
 }
 
+           /*Section3 CSS*/
 section ul.mylist3{
   display: flex;
   justify-content: flex-start;
@@ -216,6 +268,13 @@ section ul.mylist3 li img {
     margin-right: 50px;
   }
 
+           /*Footer-player CSS*/
+
+footer {
+  background-color: #293133;
+  height: 100px;
+  width: 100%;
+}
 
 ul.myplayer {
   display: flex;
@@ -227,11 +286,19 @@ ul.myplayer i {
   color: white;
   font-size: 25px;
   margin-top: 15px;
+  margin-right: 5px;
 }
+
+ul.myplayer i:hover {
+  color: yellow
+}
+           /*Footer-menu CSS*/
 
 ul.myfooter1 {
   display: flex;
   justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
 }
 
 ul.myfooter1 img {
@@ -240,7 +307,6 @@ ul.myfooter1 img {
   margin-left: 10px;
 }
 
-ul.myfooter1 i,
 ul.myfooter1 li strong {
   color: white;
 }
@@ -276,11 +342,12 @@ ul.myfooter1 li ul {
 
 ul.myfooter1 > li ul {
   margin-left: 10px;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 
 #undertheplayer {
-  margin-top: 10px;
+  margin-right: 70px;
+
 }
 
 li#undertheplayer span {
@@ -289,4 +356,72 @@ li#undertheplayer span {
 
 ul.myfooter1 li i {
   margin-right: 10px;
+}
+
+ul.myfooter1 li i:hover {
+  color: white;
+}
+
+ul.myfooter1 li:last-child:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#linefix:hover {
+  border-bottom: 2px solid #1ED760;
+}
+
+
+@media (max-width: 1200px) AND (min-width: 998px) {
+
+  section ul.mylist1,
+  section ul.mylist2,
+  section ul.mylist3 {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  section ul.mylist1 li,
+  section ul.mylist2 li,
+  section ul.mylist3 li {
+    flex-basis: calc(100% / 4 - 20px);
+    margin-right: 20px;
+  }
+
+}
+
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+  section ul.mylist1,
+  section ul.mylist2,
+  section ul.mylist3 {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  section ul.mylist1 li,
+  section ul.mylist2 li,
+  section ul.mylist3 li {
+    flex-basis: calc(100% / 2 - 20px);
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  section ul.mylist1,
+  section ul.mylist2,
+  section ul.mylist3 {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  section ul.mylist1 li,
+  section ul.mylist2 li,
+  section ul.mylist3 li {
+    flex-basis: calc(100% / 2 - 20px);
+    margin-right: 20px;
+  }
+  
 }
