@@ -33,6 +33,7 @@ nav {
   z-index: 999;
   overflow: auto;
 }
+
 ul.scroll {
   flex-grow: 1;
 }
@@ -40,6 +41,14 @@ ul.scroll {
 .logo {
   width: 180px;
   height: auto;
+}
+
+.logo-xs {
+  width: 30px;
+  height: auto;
+  margin-left: 21px;
+  margin-top: 5px;
+  display: none;
 }
 
 nav img {
@@ -411,6 +420,28 @@ ul.myfooter1 li:last-child:hover {
 }
 
 @media (max-width: 768px) {
+
+  nav {
+    width: 80px;
+    justify-content: space-between;
+  }
+
+  nav div  ul li a span,
+  ul.scroll,
+  .logo,
+  nav div:last-child a span,
+  a#fix {
+    display: none;
+  }
+
+  nav div:last-child a img,
+  nav div:last-child img {
+    margin-left: 20px;
+  }
+
+  .logo-xs {
+    display: block;
+  }
 
   section ul.mylist1,
   section ul.mylist2,
