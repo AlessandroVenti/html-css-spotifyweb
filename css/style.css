@@ -27,12 +27,14 @@ a {
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: black;
   width: 300px;
   max-height: calc(100vh - 100px);
   z-index: 999;
   overflow: auto;
+}
+ul.scroll {
+  flex-grow: 1;
 }
 
 .logo {
@@ -423,5 +425,13 @@ ul.myfooter1 li:last-child:hover {
     flex-basis: calc(100% / 2 - 20px);
     margin-right: 20px;
   }
-  
+
+  main ul.setting {
+    flex-wrap: wrap;
+  }
+
+  main ul.setting li {
+    flex-basis: calc( 100% / 6 - 20px);
+  }
+
 }
