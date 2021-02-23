@@ -63,7 +63,7 @@ ul li h3{
 .scroll {
 }
 
-li div {
+ul.scroll li div {
   padding: 10px;
   background-color: white;
   width: 30px;
@@ -73,7 +73,7 @@ li div {
   display: inline-block;
 }
 
-li span {
+ul.scroll li span {
   color: #9c9c9c;
   margin-left: 25px;
   font-size: 20px;
@@ -187,15 +187,14 @@ section ul.mylist2{
   justify-content: flex-start;
 }
 
-section ul.mylist2 li img,
-section ul.mylist3 li img  {
-  margin-right: 50px;
-}
-
 section p{
   color:  #9c9c9c;
   font-size: 20px;
   margin: 15px 0;
+}
+
+ul.mylist2 li {
+  margin-right: 50px;
 }
 
 section ul.mylist2{
@@ -211,3 +210,83 @@ section ul.mylist3{
 
 section ul.mylist3 li img {
   border-radius: 50%;
+}
+
+  ul.mylist3 li {
+    margin-right: 50px;
+  }
+
+
+ul.myplayer {
+  display: flex;
+  justify-content: center;
+}
+
+ul.myplayer i {
+  width: 40px;
+  color: white;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+ul.myfooter1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.myfooter1 img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+ul.myfooter1 i,
+ul.myfooter1 li strong {
+  color: white;
+}
+
+ul.myfooter1 li {
+  color:  #9c9c9c;
+}
+
+ul.myfooter1 li div{
+  height: 2px;
+}
+
+li span hr {
+  width: 200px;
+  height: 1px;
+  color: white;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+}
+
+#linefix {
+  width: 400px;
+}
+
+ul.myfooter1 li ul {
+  display: inline-block;
+}
+
+ul.myfooter1 > li ul {
+  margin-left: 10px;
+  margin-right: 70px;
+}
+
+#undertheplayer {
+  margin-top: 10px;
+}
+
+li#undertheplayer span {
+  margin: 0 5px;
+}
+
+ul.myfooter1 li i {
+  margin-right: 10px;
+}
