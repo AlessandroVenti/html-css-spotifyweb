@@ -27,6 +27,7 @@ a {
 nav {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: black;
   width: 300px;
   max-height: calc(100vh - 100px);
@@ -156,13 +157,13 @@ main ul {
   justify-content: center;
 }
 
-main ul.setting, main ul.setting li {
-  padding: 10px 15px;
+main ul.setting li {
+  margin: 20px 20px;
 }
 
 main ul.setting li a {
   color: #9c9c9c;
-  font-size: 20px;
+  font-size: 18px;
 }
            /*Section1 CSS*/
 
@@ -285,22 +286,22 @@ footer {
   background-color: #293133;
   height: 100px;
   width: 100%;
+  position: relative;
+  z-index: 999;
 }
 
-ul.myplayer {
-  display: flex;
-  justify-content: center;
+div.myplayer {
+  text-align: center;
 }
 
-ul.myplayer i {
-  width: 40px;
+div.myplayer i {
+  width: calc(100% / 5 - 30px);
   color: white;
   font-size: 25px;
-  margin-top: 15px;
-  margin-right: 5px;
+  min-width: 30px;
 }
 
-ul.myplayer i:hover {
+div.myplayer i:hover {
   color: yellow
 }
            /*Footer-menu CSS*/
@@ -310,12 +311,24 @@ ul.myfooter1 {
   justify-content: space-between;
   padding: 0 10px;
   align-items: center;
+  height: 100%;
+}
+
+ul.myfooter1 li {
+  flex-basis: 25%;
+}
+
+div.undertheplayer span {
+  width: 10%;
 }
 
 ul.myfooter1 img {
-  width: 50px;
-  height: 50px;
-  margin-left: 10px;
+  width: calc(10% + 10px);
+  min-width: 42px;
+}
+
+ul.myfooter1 > li ul {
+  width: calc(10% + 70px);
 }
 
 ul.myfooter1 li strong {
@@ -324,54 +337,38 @@ ul.myfooter1 li strong {
 
 ul.myfooter1 li {
   color:  #9c9c9c;
-}
-
-ul.myfooter1 li div{
-  height: 2px;
-}
-
-li span hr {
-  width: 200px;
-  height: 1px;
-  color: white;
+  margin-top: 0.2%;
 }
 
 .line {
-  width: 100px;
-  height: 2px;
-  border-bottom: 2px solid white;
+  width: calc(80% - 30px);
+  height: 5px;
+  background-color: #c9c9c9;
   display: inline-block;
+  min-width: 112px;
+  border-radius: 50px;
 }
 
 #linefix {
-  width: 400px;
+  width: 25%;
+  min-width: 125px;
 }
 
 ul.myfooter1 li ul {
   display: inline-block;
 }
 
-ul.myfooter1 > li ul {
-  margin-left: 10px;
-  margin-right: 50px;
+ul.myfooter1 li div.undertheplayer {
+  text-align: center;
 }
 
-#undertheplayer {
-  margin-right: 70px;
-
+li.volume {
+  text-align: right;
 }
 
-li#undertheplayer span {
-  margin: 0 5px;
-}
 
-ul.myfooter1 li i {
-  margin-right: 10px;
-}
 
-ul.myfooter1 li i:hover {
-  color: white;
-}
+
 
 ul.myfooter1 li:last-child:hover {
   color: white;
@@ -384,6 +381,10 @@ ul.myfooter1 li:last-child:hover {
 
 
 @media (max-width: 1200px) AND (min-width: 998px) {
+
+  main ul.setting {
+    flex-wrap: wrap;
+  }
 
   section ul.mylist1,
   section ul.mylist2,
@@ -404,6 +405,10 @@ ul.myfooter1 li:last-child:hover {
 
 @media (max-width: 998px) AND (min-width: 768px) {
 
+  main ul {
+    flex-wrap: wrap;
+  }
+
   section ul.mylist1,
   section ul.mylist2,
   section ul.mylist3 {
@@ -417,7 +422,13 @@ ul.myfooter1 li:last-child:hover {
     flex-basis: calc(100% / 2 - 20px);
     margin-right: 20px;
   }
+
+  #moreflex {
+    flex-basis: 50%;
+  }
+
 }
+
 
 @media (max-width: 768px) {
 
@@ -443,6 +454,10 @@ ul.myfooter1 li:last-child:hover {
     display: block;
   }
 
+  main ul.setting {
+    flex-wrap: wrap;
+  }
+
   section ul.mylist1,
   section ul.mylist2,
   section ul.mylist3 {
@@ -457,12 +472,12 @@ ul.myfooter1 li:last-child:hover {
     margin-right: 20px;
   }
 
-  main ul.setting {
-    flex-wrap: wrap;
+  div.myplayer i {
+    font-size: 20px;
   }
 
-  main ul.setting li {
-    flex-basis: calc( 100% / 6 - 20px);
+  #moreflex {
+    flex-basis: 50%;
   }
 
 }
