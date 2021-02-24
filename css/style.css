@@ -286,7 +286,9 @@ footer {
   background-color: #293133;
   height: 100px;
   width: 100%;
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   z-index: 999;
 }
 
@@ -299,6 +301,10 @@ div.myplayer i {
   color: white;
   font-size: 25px;
   min-width: 30px;
+}
+
+div.myplayer i#scale:hover {
+  transform: scale(1.4);
 }
 
 div.myplayer i:hover {
@@ -365,10 +371,6 @@ ul.myfooter1 li div.undertheplayer {
 li.volume {
   text-align: right;
 }
-
-
-
-
 
 ul.myfooter1 li:last-child:hover {
   color: white;
