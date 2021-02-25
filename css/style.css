@@ -27,18 +27,17 @@ a {
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: black;
   width: 300px;
-  max-height: calc(100vh - 100px);
-  z-index: 999;
-  overflow: auto;
+  height: calc(100vh - 100px);
+  position:fixed;
+  z-index: 950;
 }
 
 .logo-xs {
   width: 30px;
   height: auto;
-  margin-left: 21px;
+  margin-left: 10px;
   margin-top: 5px;
   display: none;
 }
@@ -54,13 +53,13 @@ nav img {
 }
 
 nav ul li {
-  margin: 20px 20px;
+  margin: 5px 10px;
   position: relative;
 }
 
 nav ul li a {
   color: #9c9c9c;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .green-border {
@@ -89,11 +88,15 @@ ul li h3{
   font-size: 25px;
 }
 
-ul.scroll {
+nav div:first-child {
   flex-grow: 1;
 }
+ul.scroll {
+  overflow: auto;
+  height: 30vh;
+}
 
-ul.scroll li div {
+nav div ul li:last-child div {
   padding: 10px;
   background-color: white;
   width: 30px;
@@ -103,9 +106,9 @@ ul.scroll li div {
   display: inline-block;
 }
 
-ul.scroll li span {
+nav div ul li:last-child span {
   color: #9c9c9c;
-  margin-left: 25px;
+  margin-left: 10px;
   font-size: 20px;
 }
 
@@ -129,12 +132,14 @@ hr {
 header {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: calc(100% - 300px);
+  margin-left: 300px;
   height: 100px;
   background-color: #293133;
   position: fixed;
   top: 0;
-  z-index: 998;
+  left: 0;
+  z-index: 900;
 }
 
 header button {
@@ -156,7 +161,8 @@ header button:hover {
            /*Main CSS*/
 main {
   padding-top: 100px;
-  width: 100%;
+  width: calc(100% - 300px);
+  margin-left: 300px;
   padding-left: 40px;
   padding-right: 40px;
   height: calc(100vh - 100px);
@@ -175,13 +181,11 @@ main ul.setting li {
 }
 
 ul.setting li div {
-  width: 30px;
+  width: 50px;
   height: 5px;
   background-color: green;
   border-radius: 10px;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
+  margin: 10px auto 0;
 }
 
 main ul.setting li a {
@@ -357,7 +361,8 @@ ul.myfooter1 img {
 }
 
 ul.myfooter1 > li ul {
-  width: calc(10% + 70px);
+  padding: 0 10px;
+  margin-right: 3%;
 }
 
 ul.myfooter1 li strong {
@@ -367,25 +372,30 @@ ul.myfooter1 li strong {
 ul.myfooter1 li {
   color:  #9c9c9c;
   margin-top: 0.2%;
+}
 
+ul.myfooter1 li.align {
+  display:flex;
+  align-items: center;
+}
+
+li.align i {
+  margin: 0 5px;
 }
 
 .line {
-  width: calc(80% - 30px);
+  width: 50%;
   height: 5px;
-  background-color: #c9c9c9;
+  background-color: grey;
   display: inline-block;
-  min-width: 112px;
-  border-radius: 50px;
+  border-radius: 2.5px;
   position: relative;
 }
 
 .line-absolute {
-  width: calc(80% - 30px);
+  width: 40%;
   height: 5px;
-  background-color: green;
-  display: none;
-  min-width: 112px;
+  background-color: white;
   border-radius: 50px;
   position: absolute;
   top: 0;
@@ -399,18 +409,20 @@ ul.myfooter1 li {
   display: none;
   border-radius: 50%;
   position: absolute;
-  top: -3px;
-  left: calc(80% - 35px);
+  top: -2.5px;
+  right: -5px;
 }
 
-div.line:hover .line-absolute,
+div.line:hover .line-absolute{
+  background-color: green;
+}
+
  div.line:hover .circle {
   display: block;
 }
 
 #linefix {
-  width: 25%;
-  min-width: 125px;
+  width: 35%;
 }
 
 ul.myfooter1 li ul {
@@ -423,15 +435,12 @@ ul.myfooter1 li div.undertheplayer {
 
 li.volume {
   text-align: right;
+  min-width: 120px;
 }
 
 ul.myfooter1 li:last-child:hover {
   color: white;
   text-decoration: underline;
-}
-
-#linefix:hover {
-  border-bottom: 2px solid #1ED760;
 }
 
 
@@ -496,7 +505,10 @@ ul.myfooter1 li:last-child:hover {
   ul.scroll,
   .logo,
   nav div:last-child a span,
-  a#fix {
+  a#fix,
+  nav div ul li:last-child div,
+  nav div ul li:last-child span,
+  ul li h3  {
     display: none;
   }
 
@@ -507,6 +519,16 @@ ul.myfooter1 li:last-child:hover {
 
   .logo-xs {
     display: block;
+  }
+
+  header {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+
+  main {
+    margin-left: 80px;
+    width: calc(100% - 80px);
   }
 
   main ul.setting {
@@ -533,6 +555,7 @@ ul.myfooter1 li:last-child:hover {
 
   #moreflex {
     flex-basis: 50%;
+    min-width: 250px;
   }
 
 }
