@@ -383,6 +383,10 @@ li.align i {
   margin: 0 5px;
 }
 
+li.align i:hover {
+  color: white;
+}
+
 .line {
   width: 50%;
   height: 5px;
