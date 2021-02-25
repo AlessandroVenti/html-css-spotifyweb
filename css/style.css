@@ -59,10 +59,22 @@ nav img {
 
 nav ul li {
   margin: 20px 20px;
+  position: relative;
 }
+
 nav ul li a {
   color: #9c9c9c;
   font-size: 25px;
+}
+
+.green-border {
+  height: 30px;
+  width: auto;
+  border-left: 4px solid green;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: -15px;
 }
 
 nav ul li a:hover,
@@ -159,6 +171,17 @@ main ul {
 
 main ul.setting li {
   margin: 20px 20px;
+  position: relative;
+}
+
+ul.setting li div {
+  width: 30px;
+  height: 5px;
+  background-color: green;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
 }
 
 main ul.setting li a {
@@ -353,12 +376,45 @@ ul.myfooter1 li {
   display: inline-block;
   min-width: 112px;
   border-radius: 50px;
+  position: relative;
 }
+
+.line-absolute {
+  width: calc(80% - 30px);
+  height: 5px;
+  background-color: green;
+  display: none;
+  min-width: 112px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle {
+  width: 15px;
+  height: 10px;
+  background-color: green;
+  display: none;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: calc(80% - 35px);
+}
+
+div.line:hover .line-absolute, div.line:hover .circle {
+  display: block;
+}
+
+
+
 
 #linefix {
   width: 25%;
   min-width: 125px;
 }
+
+
 
 ul.myfooter1 li ul {
   display: inline-block;
